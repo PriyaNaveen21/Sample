@@ -25,5 +25,24 @@ public class AdactinJuint {
 	b.selectByVisibleText(p.getInDate(),b.getDataFromWorkbook(1,6));
 	b.selectByVisibleText(p.getOutDate(), b.getDataFromWorkbook(1, 7));
 	b.click(p.getSearch());
+	b.implicitWait(3);
+	b.click(p.getRadioBtn());
+	b.click(p.getContinueBtn());
+
+	b.implicitWait(3);
+	b.enterText(p.getFirstName(), b.getDataFromWorkbook(2, 10));
+	b.enterText(p.getLastName(), b.getDataFromWorkbook(2, 11));
+	b.enterText(p.getAddress(), b.getDataFromWorkbook(2, 13));
+	b.enterText(p.getCardNum(), b.getDataFromWorkbook(2, 14));
+	b.enterText(p.getCardType(), b.getDataFromWorkbook(2, 15));
+	b.enterText(p.getExpiryMonth(), b.getDataFromWorkbook(2, 16));
+	b.enterText(p.getExpiryYear(), b.getDataFromWorkbook(2, 17));
+	b.enterText(p.getCvv(), b.getDataFromWorkbook(2, 18));
+	b.click(p.getBookNow());
+
+	b.implicitWait(10);
+	String s = p.getOrderNo().getAttribute("value");
+	b.setCellValue(1, 12, s);
 }
+
 }
