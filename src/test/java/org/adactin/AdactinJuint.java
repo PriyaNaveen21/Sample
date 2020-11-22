@@ -42,7 +42,7 @@ public class AdactinJuint {
 
 	b.implicitWait(10);
 	String s = p.getOrderNo().getAttribute("value");
-	b.setCellValue(1, 12, s);
+	b.setCellValue(2, 19, s);
 }
 
 }
